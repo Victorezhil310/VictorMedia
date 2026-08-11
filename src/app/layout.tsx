@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { AdSenseScript } from '@/components/AdComponents';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'VictorMedia — Free, Fast & Useful Online Tools',
@@ -49,6 +50,7 @@ export default function RootLayout({
             <ConsentBanner />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
