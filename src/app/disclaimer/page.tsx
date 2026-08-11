@@ -1,35 +1,41 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer — VictorMedia Online Tools',
-  description: 'General disclaimer regarding information, calculations, and medical/financial tool outputs on VictorMedia.net.',
+  title: 'Disclaimer — VictorMedia',
+  description: 'Official legal disclaimer for VictorMedia online tools and calculators.',
 };
 
 export default function DisclaimerPage() {
   return (
-    <div className="container" style={{ padding: '3.5rem 1.25rem', maxWidth: '860px', lineHeight: 1.7 }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Disclaimer</h1>
-      <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '2rem' }}>Last updated: August 2026</p>
+    <div className="container" style={{ padding: '4rem 1.25rem', maxWidth: '880px', lineHeight: 1.7 }}>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Disclaimer</h1>
+      <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '2.5rem' }}>
+        Last Updated: August 12, 2026
+      </p>
 
-      <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>1. General Informational Use</h2>
+      <section style={{ marginBottom: '2.5rem' }}>
+        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>1. General Information Purpose</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          The calculators, converters, text tools, and generators on VictorMedia.net are provided for general informational and productivity purposes only.
+          The calculations, conversions, text outputs, and utility tools provided on VictorMedia (https://victor-media.vercel.app and https://victormedia.net) are intended solely for general informational, educational, and workflow utility purposes.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: '2.5rem' }}>
+        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>2. Financial & Health Disclaimer</h2>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
+          <strong>Financial Calculators:</strong> Calculators such as loan repayment, mortgage, compound interest, and percentage tools produce estimates based on standard mathematical formulas. They do not constitute official financial advice or binding bank quotes.
+        </p>
+        <p style={{ color: 'var(--text-secondary)' }}>
+          <strong>Health Calculators:</strong> Tools such as the BMI Calculator provide standard index estimates for general reference. They do not replace professional medical advice, diagnosis, or clinical evaluation.
         </p>
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>2. Health & Medical Disclaimer (BMI Calculator)</h2>
+        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>3. Contact</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          The Body Mass Index (BMI) calculator provides general body mass estimates based on standard WHO formulas. It is not medical advice and should not replace consultation with a qualified medical professional.
-        </p>
-      </section>
-
-      <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>3. Financial & Math Calculations</h2>
-        <p style={{ color: 'var(--text-secondary)' }}>
-          Discount and percentage tools provide general arithmetic calculations. Users should independently verify calculations prior to financial or commercial transactions.
+          For inquiries about this disclaimer, contact: <a href="mailto:arasu9629hf@gmail.com" style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>arasu9629hf@gmail.com</a>.
         </p>
       </section>
     </div>

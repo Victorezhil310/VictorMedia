@@ -8,6 +8,8 @@ import {
   DateDifferenceTool,
   BmiCalculatorTool,
   TimeCalculatorTool,
+  CompoundInterestTool,
+  LoanCalculatorTool,
 } from './Calculators';
 
 import {
@@ -23,6 +25,8 @@ import {
   CaseConverterTool,
   RemoveDuplicateLinesTool,
   TextFormatterTool,
+  TextToSpeechTool,
+  SlugGeneratorTool,
 } from './TextTools';
 
 import {
@@ -30,6 +34,8 @@ import {
   JsonValidatorTool,
   Base64Tool,
   UrlTool,
+  CssMinifierTool,
+  CsvToJsonTool,
 } from './DeveloperTools';
 
 import {
@@ -60,6 +66,9 @@ export const TOOL_COMPONENTS_MAP: Record<string, React.FC> = {
   'date-difference': DateDifferenceTool,
   'bmi-calculator': BmiCalculatorTool,
   'time-calculator': TimeCalculatorTool,
+  'compound-interest-calculator': CompoundInterestTool,
+  'loan-calculator': LoanCalculatorTool,
+  'mortgage-calculator': LoanCalculatorTool,
 
   // Converters
   'unit-converter': LengthConverterTool,
@@ -75,13 +84,19 @@ export const TOOL_COMPONENTS_MAP: Record<string, React.FC> = {
   'case-converter': CaseConverterTool,
   'remove-duplicate-lines': RemoveDuplicateLinesTool,
   'text-formatter': TextFormatterTool,
+  'text-to-speech': TextToSpeechTool,
+  'slug-generator': SlugGeneratorTool,
 
   // Developer Tools
   'json-formatter': JsonFormatterTool,
   'json-validator': JsonValidatorTool,
   'base64': Base64Tool,
+  'base64-encoder-decoder': Base64Tool,
   'url-encoder': UrlTool,
   'url-decoder': UrlTool,
+  'url-encoder-decoder': UrlTool,
+  'css-minifier': CssMinifierTool,
+  'csv-to-json': CsvToJsonTool,
 
   // Image Tools
   'qr-generator': QrGeneratorTool,

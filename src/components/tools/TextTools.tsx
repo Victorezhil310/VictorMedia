@@ -248,8 +248,94 @@ export const TextFormatterTool: React.FC = () => {
       />
 
       <button onClick={formatText} className="btn btn-primary">
-        Format & Clean Whitespace
+        Clean Extra Spaces & Formatting
       </button>
+    </div>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/* 6. TEXT TO SPEECH READER                                                   */
+/* -------------------------------------------------------------------------- */
+export const TextToSpeechTool: React.FC = () => {
+  const [text, setText] = useState('Welcome to VictorMedia! Free, fast, and private online tools.');
+  const [speaking, setSpeaking] = useState(false);
+
+  const handleSpeak = () => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      alert('Text to speech is not supported in this browser.');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.onend = () => setSpeaking(false);
+    utterance.onerror = () => setSpeaking(false);
+    setSpeaking(true);
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const handleStop = () => {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      setSpeaking(false);
+    }
+  };
+
+  return (
+    <div>
+      <textarea
+        rows={6}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        className="textarea-field"
+        placeholder="Enter text to read aloud..."
+        style={{ marginBottom: '1.25rem' }}
+      />
+
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <button onClick={handleSpeak} disabled={speaking} className="btn btn-primary">
+          {speaking ? '🔊 Speaking...' : '▶ Play Audio'}
+        </button>
+        <button onClick={handleStop} disabled={!speaking} className="btn btn-secondary">
+          ⏹ Stop
+        </button>
+      </div>
+    </div>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/* 7. SLUG GENERATOR                                                          */
+/* -------------------------------------------------------------------------- */
+export const SlugGeneratorTool: React.FC = () => {
+  const [input, setInput] = useState('10 Best Online Developer Tools for 2026!');
+  const [slug, setSlug] = useState('');
+
+  const generateSlug = () => {
+    const s = input
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    setSlug(s);
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '1.25rem' }}>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Headline or Title</label>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="input-field" />
+      </div>
+
+      <button onClick={generateSlug} className="btn btn-primary" style={{ marginBottom: '1.5rem' }}>
+        Generate URL Slug
+      </button>
+
+      <div>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Generated SEO Slug</label>
+        <input type="text" value={slug} readOnly className="input-field" style={{ background: 'var(--bg-tertiary)', fontFamily: 'monospace' }} />
+      </div>
     </div>
   );
 };

@@ -501,6 +501,135 @@ export const TOOLS_REGISTRY: ToolMeta[] = [
     howToUse: ['Set Hours, Minutes, and Seconds.', 'Click Start Timer.', 'Audio beep sound will notify you when countdown reaches zero.'],
     features: ['Visual progress ring meter.', 'Audible notification chime alert.', 'Title bar updates remaining time.'],
     faq: [{ question: 'Can I pause the countdown?', answer: 'Yes, click Pause at any time to freeze the countdown.' }]
+  },
+  {
+    slug: 'compound-interest-calculator',
+    name: 'Compound Interest Calculator',
+    category: 'Calculators',
+    shortDescription: 'Calculate compound interest growth on investments with annual, quarterly, or monthly compounding frequency.',
+    iconName: 'TrendingUp',
+    keywords: ['compound interest calculator', 'investment calculator', 'compound growth calculator', 'interest compounding'],
+    popular: true,
+    howToUse: [
+      'Enter principal investment amount.',
+      'Specify annual interest rate and term in years.',
+      'Choose compounding frequency to calculate total return.'
+    ],
+    features: [
+      'Calculates total future balance and net interest earned.',
+      'Flexible compounding frequencies (annual, quarterly, monthly, daily).',
+      'Real-time browser computation.'
+    ],
+    faq: [
+      { question: 'What is compound interest?', answer: 'Compound interest is interest earned on initial principal plus accumulated interest from previous periods.' }
+    ]
+  },
+  {
+    slug: 'loan-calculator',
+    name: 'Loan & EMI Calculator',
+    category: 'Calculators',
+    shortDescription: 'Calculate monthly loan EMI payments, total interest payable, and repayment totals for home or personal loans.',
+    iconName: 'DollarSign',
+    keywords: ['loan calculator', 'emi calculator', 'mortgage payment calculator', 'loan repayment'],
+    popular: true,
+    featured: true,
+    howToUse: [
+      'Input principal loan amount ($).',
+      'Enter interest rate (%) and tenure in years.',
+      'View instant monthly EMI breakdown and total interest costs.'
+    ],
+    features: [
+      'Accurate monthly EMI calculation formula.',
+      'Total interest and loan repayment breakdown.',
+      'Supports home, auto, and personal loan calculations.'
+    ],
+    faq: [
+      { question: 'Does EMI change over time?', answer: 'Standard fixed-rate EMIs remain constant throughout the loan term.' }
+    ]
+  },
+  {
+    slug: 'css-minifier',
+    name: 'CSS Minifier & Formatter',
+    category: 'Developer Tools',
+    shortDescription: 'Compress CSS stylesheets by removing whitespace, comments, and line breaks to optimize page speed.',
+    iconName: 'Code',
+    keywords: ['css minifier', 'minify css', 'css compressor', 'clean css'],
+    howToUse: [
+      'Paste raw CSS code into input area.',
+      'Click Minify CSS.',
+      'Copy the optimized single-line CSS string.'
+    ],
+    features: [
+      'Removes comments, blank lines, and unnecessary spaces.',
+      'Reduces CSS file transfer sizes for faster web page loads.',
+      '100% client-side privacy.'
+    ],
+    faq: [
+      { question: 'Does CSS minification affect code styling execution?', answer: 'No, minification only strips unneeded formatting characters while retaining exact styling logic.' }
+    ]
+  },
+  {
+    slug: 'csv-to-json',
+    name: 'CSV to JSON Converter',
+    category: 'Developer Tools',
+    shortDescription: 'Convert CSV spreadsheet text and tables directly into structured JSON arrays.',
+    iconName: 'FileCode',
+    keywords: ['csv to json', 'convert csv to json', 'csv json parser', 'table to json'],
+    howToUse: [
+      'Paste comma-separated CSV text with header row.',
+      'Click Convert to JSON.',
+      'Copy formatted JSON array output.'
+    ],
+    features: [
+      'Header-aware CSV column parsing.',
+      'Formatted indented JSON output.',
+      'Instant client-side execution.'
+    ],
+    faq: [
+      { question: 'Do my CSV records get uploaded to a server?', answer: 'No, all parsing runs locally inside your browser.' }
+    ]
+  },
+  {
+    slug: 'text-to-speech',
+    name: 'Text to Speech Reader',
+    category: 'Text Tools',
+    shortDescription: 'Read text out loud using browser Web Speech synthesis audio engine.',
+    iconName: 'Volume2',
+    keywords: ['text to speech', 'tts reader', 'read text out loud', 'speech synthesizer'],
+    howToUse: [
+      'Type or paste text into the box.',
+      'Click Play Audio to listen to natural voice speech.',
+      'Click Stop to pause speech synthesis.'
+    ],
+    features: [
+      'Native Web Speech API engine.',
+      'Zero audio file downloads needed.',
+      'Works offline in browser.'
+    ],
+    faq: [
+      { question: 'Is voice reader free?', answer: 'Yes, text-to-speech uses your browser built-in speech engine.' }
+    ]
+  },
+  {
+    slug: 'slug-generator',
+    name: 'SEO URL Slug Generator',
+    category: 'Text Tools',
+    shortDescription: 'Convert titles and article headlines into clean, lowercase, hyphenated URL slugs for web pages.',
+    iconName: 'Link',
+    keywords: ['slug generator', 'url slug generator', 'seo slug maker', 'permalink generator'],
+    howToUse: [
+      'Enter headline or phrase.',
+      'Click Generate URL Slug.',
+      'Copy clean hyphenated slug.'
+    ],
+    features: [
+      'Strips special characters and punctuation.',
+      'Converts spaces to hyphens and text to lowercase.',
+      'SEO compliant permalinks.'
+    ],
+    faq: [
+      { question: 'Why use hyphens in URLs?', answer: 'Search engines treat hyphens as word separators in web page URLs.' }
+    ]
   }
 ];
 

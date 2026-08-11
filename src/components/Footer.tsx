@@ -49,7 +49,6 @@ export const Footer: React.FC = () => {
               <li><Link href="/categories">Tool Categories</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
-              <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">XML Sitemap</a></li>
             </ul>
           </div>
 

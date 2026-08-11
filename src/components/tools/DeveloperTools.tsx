@@ -196,3 +196,89 @@ export const UrlTool: React.FC = () => {
     </div>
   );
 };
+
+/* -------------------------------------------------------------------------- */
+/* 5. CSS MINIFIER & BEAUTIFIER                                                */
+/* -------------------------------------------------------------------------- */
+export const CssMinifierTool: React.FC = () => {
+  const [input, setInput] = useState(`body {\n  margin: 0;\n  padding: 0;\n  background-color: #ffffff;\n}`);
+  const [output, setOutput] = useState('');
+
+  const minifyCss = () => {
+    const minified = input
+      .replace(/\/\*[\s\S]*?\*\//g, '')
+      .replace(/\s+/g, ' ')
+      .replace(/\s*([{}:;,])\s*/g, '$1')
+      .replace(/;\}/g, '}')
+      .trim();
+    setOutput(minified);
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '1rem' }}>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>CSS Code</label>
+        <textarea rows={6} value={input} onChange={(e) => setInput(e.target.value)} className="textarea-field" style={{ fontFamily: 'monospace' }} />
+      </div>
+
+      <button onClick={minifyCss} className="btn btn-primary" style={{ marginBottom: '1.5rem' }}>
+        Minify CSS
+      </button>
+
+      <div>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Minified Output</label>
+        <textarea rows={5} value={output} readOnly className="textarea-field" style={{ background: 'var(--bg-tertiary)', fontFamily: 'monospace' }} />
+      </div>
+    </div>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/* 6. CSV TO JSON CONVERTER                                                    */
+/* -------------------------------------------------------------------------- */
+export const CsvToJsonTool: React.FC = () => {
+  const [csv, setCsv] = useState(`name,age,city\nAlice,30,New York\nBob,25,London`);
+  const [json, setJson] = useState('');
+
+  const convertCsvToJson = () => {
+    try {
+      const lines = csv.trim().split('\n');
+      if (lines.length < 2) {
+        setJson('[]');
+        return;
+      }
+      const headers = lines[0].split(',').map((h) => h.trim());
+      const result = [];
+      for (let i = 1; i < lines.length; i++) {
+        const obj: Record<string, string> = {};
+        const currentline = lines[i].split(',');
+        headers.forEach((header, j) => {
+          obj[header] = currentline[j] ? currentline[j].trim() : '';
+        });
+        result.push(obj);
+      }
+      setJson(JSON.stringify(result, null, 2));
+    } catch {
+      setJson('Error parsing CSV');
+    }
+  };
+
+  return (
+    <div>
+      <div style={{ marginBottom: '1rem' }}>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>CSV Input</label>
+        <textarea rows={5} value={csv} onChange={(e) => setCsv(e.target.value)} className="textarea-field" style={{ fontFamily: 'monospace' }} />
+      </div>
+
+      <button onClick={convertCsvToJson} className="btn btn-primary" style={{ marginBottom: '1.5rem' }}>
+        Convert to JSON
+      </button>
+
+      <div>
+        <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>JSON Output</label>
+        <textarea rows={7} value={json} readOnly className="textarea-field" style={{ background: 'var(--bg-tertiary)', fontFamily: 'monospace' }} />
+      </div>
+    </div>
+  );
+};
+

@@ -563,3 +563,125 @@ export const TimeCalculatorTool: React.FC = () => {
     </div>
   );
 };
+
+/* -------------------------------------------------------------------------- */
+/* 9. COMPOUND INTEREST CALCULATOR                                             */
+/* -------------------------------------------------------------------------- */
+export const CompoundInterestTool: React.FC = () => {
+  const [principal, setPrincipal] = useState('10000');
+  const [rate, setRate] = useState('7');
+  const [years, setYears] = useState('10');
+  const [frequency, setFrequency] = useState('12');
+
+  const p = parseFloat(principal) || 0;
+  const r = (parseFloat(rate) || 0) / 100;
+  const t = parseFloat(years) || 0;
+  const n = parseFloat(frequency) || 1;
+
+  const totalAmount = p * Math.pow(1 + r / n, n * t);
+  const totalInterest = totalAmount - p;
+
+  return (
+    <div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Initial Principal ($)</label>
+          <input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} className="input-field" />
+        </div>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Annual Interest Rate (%)</label>
+          <input type="number" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="input-field" />
+        </div>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Investment Term (Years)</label>
+          <input type="number" value={years} onChange={(e) => setYears(e.target.value)} className="input-field" />
+        </div>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Compounding Frequency</label>
+          <select value={frequency} onChange={(e) => setFrequency(e.target.value)} className="select-field">
+            <option value="1">Annually (1/yr)</option>
+            <option value="4">Quarterly (4/yr)</option>
+            <option value="12">Monthly (12/yr)</option>
+            <option value="365">Daily (365/yr)</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="glass-card" style={{ padding: '1.75rem', background: 'var(--bg-tertiary)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', textAlign: 'center' }}>
+        <div>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Future Balance</span>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-primary)' }}>
+            ${totalAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
+        </div>
+        <div>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Total Interest Earned</span>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--success)' }}>
+            ${totalInterest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/* 10. LOAN / EMI CALCULATOR                                                   */
+/* -------------------------------------------------------------------------- */
+export const LoanCalculatorTool: React.FC = () => {
+  const [loanAmount, setLoanAmount] = useState('250000');
+  const [interestRate, setInterestRate] = useState('6.5');
+  const [tenureYears, setTenureYears] = useState('30');
+
+  const p = parseFloat(loanAmount) || 0;
+  const r = (parseFloat(interestRate) || 0) / 12 / 100;
+  const n = (parseFloat(tenureYears) || 0) * 12;
+
+  let emi = 0;
+  if (p > 0 && r > 0 && n > 0) {
+    emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+  }
+
+  const totalPayment = emi * n;
+  const totalInterest = totalPayment - p;
+
+  return (
+    <div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Loan Principal Amount ($)</label>
+          <input type="number" value={loanAmount} onChange={(e) => setLoanAmount(e.target.value)} className="input-field" />
+        </div>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Annual Interest Rate (%)</label>
+          <input type="number" step="0.1" value={interestRate} onChange={(e) => setInterestRate(e.target.value)} className="input-field" />
+        </div>
+        <div>
+          <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Loan Term (Years)</label>
+          <input type="number" value={tenureYears} onChange={(e) => setTenureYears(e.target.value)} className="input-field" />
+        </div>
+      </div>
+
+      <div className="glass-card" style={{ padding: '1.75rem', background: 'var(--bg-tertiary)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', textAlign: 'center' }}>
+        <div>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Monthly Payment (EMI)</span>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-primary)' }}>
+            ${emi.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
+        </div>
+        <div>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Total Interest Payable</span>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--warning)' }}>
+            ${totalInterest > 0 ? totalInterest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}
+          </div>
+        </div>
+        <div>
+          <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Total Loan Repayment</span>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+            ${totalPayment > 0 ? totalPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
