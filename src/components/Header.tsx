@@ -92,6 +92,7 @@ export const Header: React.FC = () => {
             <ul className="nav-links">
               <li><Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link></li>
               <li><Link href="/tools" className={`nav-link ${pathname.startsWith('/tools') ? 'active' : ''}`}>All Tools</Link></li>
+              <li><Link href="/games" className={`nav-link ${pathname === '/games' ? 'active' : ''}`}>🎮 Games</Link></li>
               <li><Link href="/categories" className={`nav-link ${pathname === '/categories' ? 'active' : ''}`}>Categories</Link></li>
               <li><Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>About</Link></li>
               <li><Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link></li>

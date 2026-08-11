@@ -5,16 +5,17 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { AntigravityCanvas } from '@/components/AntigravityCanvas';
+import { SupportChatWidget } from '@/components/SupportChatWidget';
 
 export const metadata: Metadata = {
   title: 'VictorMedia — Free, Fast & Useful Online Tools',
-  description: 'VictorMedia provides free, fast, private, and high-performance online calculators, converters, developer tools, text utilities, and generators.',
-  keywords: ['online tools', 'free calculator', 'word counter', 'json formatter', 'qr code generator', 'unit converter', 'bmi calculator', 'victormedia'],
+  description: 'VictorMedia provides free, fast, private, and high-performance online calculators, converters, developer tools, text utilities, games, and generators.',
+  keywords: ['online tools', 'free calculator', 'word counter', 'json formatter', 'qr code generator', 'unit converter', 'bmi calculator', 'online games', 'victormedia'],
   authors: [{ name: 'VictorMedia' }],
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://victor-media.vercel.app'),
   openGraph: {
     title: 'VictorMedia — Free, Fast & Useful Online Tools',
-    description: '100% free, private browser-processed calculators, converters, text tools, and developer utilities.',
+    description: '100% free, private browser-processed calculators, converters, text tools, mini games, and developer utilities.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://victor-media.vercel.app',
     siteName: 'VictorMedia',
     locale: 'en_US',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'VictorMedia — Free Online Tools',
-    description: 'Fast, browser-based online tools for calculators, text manipulation, image compression, and developer utilities.',
+    description: 'Fast, browser-based online tools for calculators, text manipulation, image compression, games, and developer utilities.',
   },
   other: {
     'google-adsense-account': 'ca-pub-6751037211810646',
@@ -103,6 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <main style={{ flex: 1 }}>{children}</main>
             <Footer />
             <ConsentBanner />
+            <SupportChatWidget />
           </div>
         </ThemeProvider>
       </body>
