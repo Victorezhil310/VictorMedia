@@ -3,16 +3,16 @@ import { Metadata } from 'next';
 import { Shield, Zap, Wrench, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us — VictorMdeia Online Tools',
-  description: 'Learn about VictorMdeia, our mission to provide free, private, browser-processed tools, and our technical architecture.',
+  title: 'About Us — VictorMedia Online Tools',
+  description: 'Learn about VictorMedia, our mission to provide free, private, browser-processed tools, and our technical architecture.',
 };
 
 export default function AboutPage() {
   return (
     <div className="container" style={{ padding: '3.5rem 1.25rem', maxWidth: '860px' }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>About VictorMdeia</h1>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>About VictorMedia</h1>
       <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '2rem' }}>
-        VictorMdeia is an independent digital tools and utility platform designed to deliver fast, reliable, accessible, and browser-based software utilities.
+        VictorMedia is an independent digital tools and utility platform designed to deliver fast, reliable, accessible, and browser-based software utilities.
       </p>
 
       <div className="glass-card" style={{ padding: '2rem', marginBottom: '2.5rem', background: 'var(--bg-secondary)' }}>

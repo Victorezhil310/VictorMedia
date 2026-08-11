@@ -45,7 +45,7 @@ export default function ContactPage() {
   return (
     <div className="container" style={{ padding: '3.5rem 1.25rem', maxWidth: '720px' }}>
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>Contact VictorMdeia</h1>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>Contact VictorMedia</h1>
         <p style={{ color: 'var(--text-secondary)' }}>
           Have feedback, a feature suggestion, or need support? Send us a message below or email us directly at <a href="mailto:arasu9629hf@gmail.com" style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>arasu9629hf@gmail.com</a>.
         </p>

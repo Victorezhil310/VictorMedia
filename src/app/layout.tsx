@@ -7,22 +7,22 @@ import { ConsentBanner } from '@/components/ConsentBanner';
 import { AdSenseScript } from '@/components/AdComponents';
 
 export const metadata: Metadata = {
-  title: 'VictorMdeia — Free, Fast & Useful Online Tools',
-  description: 'VictorMdeia provides free, fast, private, and high-performance online calculators, converters, developer tools, text utilities, and generators.',
+  title: 'VictorMedia — Free, Fast & Useful Online Tools',
+  description: 'VictorMedia provides free, fast, private, and high-performance online calculators, converters, developer tools, text utilities, and generators.',
   keywords: ['online tools', 'free calculator', 'word counter', 'json formatter', 'qr code generator', 'unit converter', 'bmi calculator'],
-  authors: [{ name: 'VictorMdeia' }],
-  metadataBase: new URL('https://victormdeia.net'),
+  authors: [{ name: 'VictorMedia' }],
+  metadataBase: new URL('https://victormedia.net'),
   openGraph: {
-    title: 'VictorMdeia — Free, Fast & Useful Online Tools',
+    title: 'VictorMedia — Free, Fast & Useful Online Tools',
     description: '100% free, private browser-processed calculators, converters, text tools, and developer utilities.',
-    url: 'https://victormdeia.net',
-    siteName: 'VictorMdeia',
+    url: 'https://victormedia.net',
+    siteName: 'VictorMedia',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VictorMdeia — Free Online Tools',
+    title: 'VictorMedia — Free Online Tools',
     description: 'Fast, browser-based online tools for calculators, text manipulation, image compression, and developer utilities.',
   },
   verification: {

@@ -8,7 +8,7 @@ import { Download, Upload, QrCode, Palette, FileArchive } from 'lucide-react';
 /* 1. QR CODE GENERATOR                                                       */
 /* -------------------------------------------------------------------------- */
 export const QrGeneratorTool: React.FC = () => {
-  const [text, setText] = useState('https://victormdeia.net');
+  const [text, setText] = useState('https://VictorMedia.net');
   const [qrUrl, setQrUrl] = useState('');
   const [fgColor, setFgColor] = useState('#4f46e5');
   const [bgColor, setBgColor] = useState('#ffffff');
@@ -48,7 +48,7 @@ export const QrGeneratorTool: React.FC = () => {
           </div>
         )}
         <div>
-          <a href={qrUrl} download="victormdeia-qrcode.png" className="btn btn-primary">
+          <a href={qrUrl} download="VictorMedia-qrcode.png" className="btn btn-primary">
             <Download size={16} /> Download QR PNG
           </a>
         </div>
@@ -197,7 +197,7 @@ export const ImageCompressorTool: React.FC = () => {
           </div>
           <img src={compressedUrl} alt="Compressed Result" style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: 'var(--radius-md)', marginBottom: '1rem' }} />
           <div>
-            <a href={compressedUrl} download="victormdeia-compressed.jpg" className="btn btn-primary">
+            <a href={compressedUrl} download="VictorMedia-compressed.jpg" className="btn btn-primary">
               <Download size={16} /> Download Compressed Image
             </a>
           </div>
@@ -275,7 +275,7 @@ export const ImageResizerTool: React.FC = () => {
         <div style={{ textAlign: 'center' }}>
           <img src={resizedUrl} alt="Resized" style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: 'var(--radius-md)', marginBottom: '1rem' }} />
           <div>
-            <a href={resizedUrl} download="victormdeia-resized.png" className="btn btn-primary">
+            <a href={resizedUrl} download="VictorMedia-resized.png" className="btn btn-primary">
               <Download size={16} /> Download Resized Image
             </a>
           </div>
@@ -332,7 +332,7 @@ export const ImageFormatConverterTool: React.FC = () => {
 
       {convertedUrl && (
         <div style={{ textAlign: 'center' }}>
-          <a href={convertedUrl} download={`victormdeia-converted.${targetFormat.split('/')[1]}`} className="btn btn-primary">
+          <a href={convertedUrl} download={`VictorMedia-converted.${targetFormat.split('/')[1]}`} className="btn btn-primary">
             <Download size={16} /> Download Converted File
           </a>
         </div>

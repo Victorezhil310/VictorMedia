@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — VictorMdeia',
-  description: 'Terms of Service governing usage of VictorMdeia.net online tools and services.',
+  title: 'Terms of Service — VictorMedia',
+  description: 'Terms of Service governing usage of VictorMedia.net online tools and services.',
 };
 
 export default function TermsPage() {
@@ -15,21 +15,21 @@ export default function TermsPage() {
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>1. Acceptance of Terms</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          By accessing and using VictorMdeia.net ("Website"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our tools or services.
+          By accessing and using VictorMedia.net ("Website"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our tools or services.
         </p>
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>2. Use of Online Utilities</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          VictorMdeia provides online utilities for general informational and productivity purposes. While we strive for absolute precision in our calculators and converters, all results are provided "as-is" without warranty of any kind.
+          VictorMedia provides online utilities for general informational and productivity purposes. While we strive for absolute precision in our calculators and converters, all results are provided "as-is" without warranty of any kind.
         </p>
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>3. Intellectual Property</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          All original website code, layout design, branding, and graphics on VictorMdeia.net are the property of VictorMdeia. Content you input or upload into tools remains strictly your own property.
+          All original website code, layout design, branding, and graphics on VictorMedia.net are the property of VictorMedia. Content you input or upload into tools remains strictly your own property.
         </p>
       </section>
 

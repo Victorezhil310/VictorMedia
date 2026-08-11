@@ -22,19 +22,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!tool) {
     return {
-      title: 'Tool Not Found — VictorMdeia',
+      title: 'Tool Not Found — VictorMedia',
     };
   }
 
   return {
-    title: `${tool.name} — Free Online Tool | VictorMdeia`,
+    title: `${tool.name} — Free Online Tool | VictorMedia`,
     description: tool.shortDescription,
     keywords: tool.keywords,
     openGraph: {
-      title: `${tool.name} — VictorMdeia`,
+      title: `${tool.name} — VictorMedia`,
       description: tool.shortDescription,
-      url: `https://victormdeia.net/tools/${tool.slug}`,
-      siteName: 'VictorMdeia',
+      url: `https://victormedia.net/tools/${tool.slug}`,
+      siteName: 'VictorMedia',
       type: 'website',
     },
   };
@@ -47,15 +47,17 @@ export default function ToolPage({ params }: PageProps) {
     notFound();
   }
 
+  // tool is guaranteed to be defined here since notFound() throws
+  const resolvedTool = tool!;
   const ToolComponent = getToolComponent(params.slug);
 
   return (
-    <ToolLayout tool={tool}>
+    <ToolLayout tool={resolvedTool}>
       {ToolComponent ? (
         <ToolComponent />
       ) : (
         <div style={{ textAlign: 'center', padding: '2rem' }}>
-          Interactive module initialized for {tool.name}.
+          Interactive module initialized for {resolvedTool.name}.
         </div>
       )}
     </ToolLayout>

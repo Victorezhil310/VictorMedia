@@ -24,10 +24,10 @@ export const Footer: React.FC = () => {
               }}>
                 <Wrench size={18} />
               </div>
-              <span>Victor<span className="gradient-text">Mdeia</span></span>
+              <span>Victor<span className="gradient-text">Media</span></span>
             </Link>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
-              VictorMdeia provides free, fast, private, and genuinely useful online tools. All calculations and text processing occur directly in your browser.
+              VictorMedia provides free, fast, private, and genuinely useful online tools. All calculations and text processing occur directly in your browser.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
               <Mail size={16} />
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div>
-            © 2026 VictorMdeia. All rights reserved.
+            © 2026 VictorMedia. All rights reserved.
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)' }}>
             <ShieldCheck size={16} />

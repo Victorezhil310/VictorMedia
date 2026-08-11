@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
             }}>
               <Wrench size={20} />
             </div>
-            <span>Victor<span className="gradient-text">Mdeia</span></span>
+            <span>Victor<span className="gradient-text">Media</span></span>
           </Link>
 
           {/* Search Bar Desktop */}
@@ -96,12 +96,6 @@ export const Header: React.FC = () => {
             )}
           </div>
 
-          <style jsx>{`
-            @media (min-width: 768px) {
-              .desktop-search { display: block !important; }
-            }
-          `}</style>
-
           {/* Navigation Links */}
           <nav style={{ display: 'none' }} className="desktop-nav">
             <ul className="nav-links">
@@ -112,12 +106,6 @@ export const Header: React.FC = () => {
               <li><Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link></li>
             </ul>
           </nav>
-
-          <style jsx>{`
-            @media (min-width: 900px) {
-              .desktop-nav { display: block !important; }
-            }
-          `}</style>
 
           {/* Actions: Donate, Theme Toggle, Mobile Menu */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -148,12 +136,6 @@ export const Header: React.FC = () => {
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-
-            <style jsx>{`
-              @media (min-width: 900px) {
-                .mobile-toggle { display: none !important; }
-              }
-            `}</style>
           </div>
         </div>
 

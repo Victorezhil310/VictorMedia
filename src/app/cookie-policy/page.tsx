@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — VictorMdeia',
-  description: 'Detailed Cookie Policy outlining essential, analytics, and advertising cookies at VictorMdeia.net.',
+  title: 'Cookie Policy — VictorMedia',
+  description: 'Detailed Cookie Policy outlining essential, analytics, and advertising cookies at VictorMedia.net.',
 };
 
 export default function CookiePolicyPage() {

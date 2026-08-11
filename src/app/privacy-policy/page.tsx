@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — VictorMdeia',
-  description: 'Comprehensive Privacy Policy detailing data collection, cookies, Google AdSense, Google Analytics, and user privacy rights at VictorMdeia.net.',
+  title: 'Privacy Policy — VictorMedia',
+  description: 'Comprehensive Privacy Policy detailing data collection, cookies, Google AdSense, Google Analytics, and user privacy rights at VictorMedia.net.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -15,14 +15,14 @@ export default function PrivacyPolicyPage() {
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>1. Introduction</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          At VictorMdeia (https://victormdeia.net), we respect your privacy. This Privacy Policy outlines what information is collected, how it is used, and your rights regarding your data.
+          At VictorMedia (https://VictorMedia.net), we respect your privacy. This Privacy Policy outlines what information is collected, how it is used, and your rights regarding your data.
         </p>
       </section>
 
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>2. Data Collection & Processing</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-          <strong>Browser-Processed Data:</strong> The primary service of VictorMdeia is providing online utilities (calculators, text counters, JSON formatters, image compressors). All data processed within these tools remains locally within your browser and is not stored or transmitted to our servers.
+          <strong>Browser-Processed Data:</strong> The primary service of VictorMedia is providing online utilities (calculators, text counters, JSON formatters, image compressors). All data processed within these tools remains locally within your browser and is not stored or transmitted to our servers.
         </p>
         <p style={{ color: 'var(--text-secondary)' }}>
           <strong>Voluntary Submissions:</strong> When you send a message via our Contact form, we collect your name, email address, and message contents solely for responding to your inquiry.
@@ -32,10 +32,10 @@ export default function PrivacyPolicyPage() {
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>3. Third-Party Advertising & Google AdSense</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-          We may use Google AdSense to serve advertisements on VictorMdeia.net. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites on the internet.
+          We may use Google AdSense to serve advertisements on VictorMedia.net. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites on the internet.
         </p>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-          Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to VictorMdeia.net and/or other sites on the Internet.
+          Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to VictorMedia.net and/or other sites on the Internet.
         </p>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
           Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-primary)' }}>Google Ads Settings</a>.

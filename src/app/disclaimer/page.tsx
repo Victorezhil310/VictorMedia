@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer — VictorMdeia Online Tools',
-  description: 'General disclaimer regarding information, calculations, and medical/financial tool outputs on VictorMdeia.net.',
+  title: 'Disclaimer — VictorMedia Online Tools',
+  description: 'General disclaimer regarding information, calculations, and medical/financial tool outputs on VictorMedia.net.',
 };
 
 export default function DisclaimerPage() {
@@ -15,7 +15,7 @@ export default function DisclaimerPage() {
       <section style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '0.75rem' }}>1. General Informational Use</h2>
         <p style={{ color: 'var(--text-secondary)' }}>
-          The calculators, converters, text tools, and generators on VictorMdeia.net are provided for general informational and productivity purposes only.
+          The calculators, converters, text tools, and generators on VictorMedia.net are provided for general informational and productivity purposes only.
         </p>
       </section>
 

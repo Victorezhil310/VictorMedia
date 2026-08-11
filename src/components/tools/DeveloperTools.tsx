@@ -7,7 +7,7 @@ import { Copy, Check, Code, ShieldCheck, AlertCircle } from 'lucide-react';
 /* 1. JSON FORMATTER                                                          */
 /* -------------------------------------------------------------------------- */
 export const JsonFormatterTool: React.FC = () => {
-  const [jsonInput, setJsonInput] = useState('{"name":"VictorMdeia","tools":30,"active":true}');
+  const [jsonInput, setJsonInput] = useState('{"name":"VictorMedia","tools":30,"active":true}');
   const [indent, setIndent] = useState<number | 'min'>(2);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
@@ -114,7 +114,7 @@ export const JsonValidatorTool: React.FC = () => {
 /* -------------------------------------------------------------------------- */
 export const Base64Tool: React.FC = () => {
   const [mode, setMode] = useState<'encode' | 'decode'>('encode');
-  const [input, setInput] = useState('Hello VictorMdeia Tools!');
+  const [input, setInput] = useState('Hello VictorMedia Tools!');
   const [output, setOutput] = useState('');
 
   const processBase64 = () => {
@@ -158,7 +158,7 @@ export const Base64Tool: React.FC = () => {
 /* -------------------------------------------------------------------------- */
 export const UrlTool: React.FC = () => {
   const [mode, setMode] = useState<'encode' | 'decode'>('encode');
-  const [input, setInput] = useState('https://victormdeia.net/search?q=free tools');
+  const [input, setInput] = useState('https://VictorMedia.net/search?q=free tools');
   const [output, setOutput] = useState('');
 
   const processUrl = () => {

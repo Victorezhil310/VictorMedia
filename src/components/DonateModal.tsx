@@ -11,7 +11,7 @@ interface DonateModalProps {
 
 export const DonateModal: React.FC<DonateModalProps> = ({ isOpen, onClose }) => {
   const upiId = 'arasu9629hf@okhdfcbank';
-  const upiLink = `upi://pay?pa=${upiId}&pn=VictorMdeia&cu=INR`;
+  const upiLink = `upi://pay?pa=${upiId}&pn=VictorMedia&cu=INR`;
   const [copied, setCopied] = useState(false);
   const [qrSrc, setQrSrc] = useState<string>('');
 
@@ -83,9 +83,9 @@ export const DonateModal: React.FC<DonateModalProps> = ({ isOpen, onClose }) => 
           <Heart size={28} fill="#ef4444" />
         </div>
 
-        <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Support VictorMdeia</h3>
+        <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>Support VictorMedia</h3>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', marginBottom: '1.5rem' }}>
-          VictorMdeia is 100% free and privacy-focused. If our tools helped you save time, consider supporting our development!
+          VictorMedia is 100% free and privacy-focused. If our tools helped you save time, consider supporting our development!
         </p>
 
         {qrSrc && (

@@ -2,8 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Data Deletion Instructions — VictorMdeia',
-  description: 'How to request data deletion at VictorMdeia.net.',
+  title: 'Data Deletion Instructions — VictorMedia',
+  description: 'How to request data deletion at VictorMedia.net.',
 };
 
 export default function DataDeletionPage() {
@@ -11,7 +11,7 @@ export default function DataDeletionPage() {
     <div className="container" style={{ padding: '3.5rem 1.25rem', maxWidth: '860px', lineHeight: 1.7 }}>
       <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>User Data Deletion Policy</h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
-        Because VictorMdeia online utilities run client-side in your browser, no tool input data or uploaded files are stored on our servers.
+        Because VictorMedia online utilities run client-side in your browser, no tool input data or uploaded files are stored on our servers.
       </p>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '1.25rem' }}>
         To delete your local browser state (theme preferences, recent tool history, saved items), simply click the button below:

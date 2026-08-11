@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { TOOLS_REGISTRY } from '@/lib/tools-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://victormdeia.net';
+  const baseUrl = 'https://VictorMedia.net';
 
   const staticPages = [
     '',

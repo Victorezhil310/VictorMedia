@@ -295,7 +295,7 @@ export const TOOLS_REGISTRY: ToolMeta[] = [
       'Establishes top keyword density frequencies.',
       '1-click Clear and Copy buttons.'
     ],
-    faq: [{ question: 'Is there a limit on text length?', answer: 'No, VictorMdeia word counter can handle large documents and articles effortlessly.' }]
+    faq: [{ question: 'Is there a limit on text length?', answer: 'No, VictorMedia word counter can handle large documents and articles effortlessly.' }]
   },
   {
     slug: 'character-counter',

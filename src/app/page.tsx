@@ -17,8 +17,8 @@ export default function HomePage() {
           <div className="badge badge-accent" style={{ marginBottom: '1.25rem', padding: '0.35rem 0.85rem' }}>
             ⚡ 100% Free & Browser-Processed Utilities
           </div>
-          <h1 style={{ marginBottom: '1.25rem', tracking: '-0.02em' }}>
-            Victor<span className="gradient-text">Mdeia</span> — Free, Fast & Useful Online Tools
+          <h1 style={{ marginBottom: '1.25rem', letterSpacing: '-0.02em' }}>
+            Victor<span className="gradient-text">Media</span> — Free, Fast & Useful Online Tools
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
             Empowering your daily workflow with over {TOOLS_REGISTRY.length}+ instant online calculators, converters, developer tools, text utilities, and generators.
@@ -103,11 +103,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose VictorMdeia */}
+      {/* Why Choose VictorMedia */}
       <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem auto' }}>
-            <h2>Why Choose VictorMdeia?</h2>
+            <h2>Why Choose VictorMedia?</h2>
             <p style={{ color: 'var(--text-secondary)' }}>
               Built for speed, simplicity, and absolute data privacy.
             </p>
@@ -153,7 +153,7 @@ export default function HomePage() {
           <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Frequently Asked Questions</h2>
 
           <div className="faq-item">
-            <div className="faq-question">Are VictorMdeia tools completely free to use?</div>
+            <div className="faq-question">Are VictorMedia tools completely free to use?</div>
             <div className="faq-answer">Yes, 100% free with unlimited usage. No subscriptions, hidden fees, or registration limits.</div>
           </div>
 
@@ -164,7 +164,7 @@ export default function HomePage() {
 
           <div className="faq-item">
             <div className="faq-question">Do these tools work on mobile devices?</div>
-            <div className="faq-answer">Yes, VictorMdeia is built mobile-first and works seamlessly on Android, iOS, tablets, and desktop screens.</div>
+            <div className="faq-answer">Yes, VictorMedia is built mobile-first and works seamlessly on Android, iOS, tablets, and desktop screens.</div>
           </div>
         </div>
       </section>
