@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Wrench, Search, Menu, X, Heart } from 'lucide-react';
+import { Sparkles, Search, Menu, X, Heart } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { DonateModal } from './DonateModal';
 import { TOOLS_REGISTRY } from '@/lib/tools-data';
@@ -29,17 +29,8 @@ export const Header: React.FC = () => {
       <header className="header-nav">
         <div className="container header-container">
           <Link href="/" className="logo-brand">
-            <div style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: 'var(--radius-md)',
-              background: 'var(--accent-gradient)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff'
-            }}>
-              <Wrench size={20} />
+            <div className="logo-icon-ring">
+              <Sparkles size={20} />
             </div>
             <span>Victor<span className="gradient-text">Media</span></span>
           </Link>
@@ -49,7 +40,7 @@ export const Header: React.FC = () => {
             <div style={{ position: 'relative' }}>
               <input
                 type="text"
-                placeholder="Search 30+ tools..."
+                placeholder="Search tools & utilities..."
                 className="input-field"
                 value={searchQuery}
                 onChange={(e) => {
@@ -58,9 +49,9 @@ export const Header: React.FC = () => {
                 }}
                 onFocus={() => setShowSearchResults(true)}
                 onBlur={() => setTimeout(() => setShowSearchResults(false), 200)}
-                style={{ paddingLeft: '2.5rem', height: '40px', fontSize: '0.88rem' }}
+                style={{ paddingLeft: '2.5rem', height: '42px', fontSize: '0.88rem' }}
               />
-              <Search size={16} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+              <Search size={17} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
             </div>
 
             {showSearchResults && filteredTools.length > 0 && (
@@ -100,7 +91,7 @@ export const Header: React.FC = () => {
           <nav style={{ display: 'none' }} className="desktop-nav">
             <ul className="nav-links">
               <li><Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link></li>
-              <li><Link href="/tools" className={`nav-link ${pathname.startsWith('/tools') ? 'active' : ''}`}>Tools</Link></li>
+              <li><Link href="/tools" className={`nav-link ${pathname.startsWith('/tools') ? 'active' : ''}`}>All Tools</Link></li>
               <li><Link href="/categories" className={`nav-link ${pathname === '/categories' ? 'active' : ''}`}>Categories</Link></li>
               <li><Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>About</Link></li>
               <li><Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link></li>
@@ -112,7 +103,7 @@ export const Header: React.FC = () => {
             <button
               onClick={() => setDonateOpen(true)}
               className="btn btn-outline"
-              style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem', color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.4)' }}
+              style={{ padding: '0.45rem 0.85rem', fontSize: '0.85rem', color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.4)' }}
             >
               <Heart size={15} fill="#ef4444" />
               <span>Donate</span>
@@ -144,7 +135,7 @@ export const Header: React.FC = () => {
           <div style={{
             background: 'var(--bg-secondary)',
             borderBottom: '1px solid var(--bg-card-border)',
-            padding: '1.25rem 1.25rem 1.75rem 1.25rem'
+            padding: '1.25rem'
           }}>
             <div style={{ marginBottom: '1rem' }}>
               <input

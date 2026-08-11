@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Wrench, Mail, ShieldCheck } from 'lucide-react';
+import { Sparkles, Mail, ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -11,23 +11,14 @@ export const Footer: React.FC = () => {
         <div className="footer-grid">
           {/* Brand Info */}
           <div className="footer-column">
-            <Link href="/" className="logo-brand" style={{ marginBottom: '1rem', display: 'inline-flex' }}>
-              <div style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: 'var(--radius-sm)',
-                background: 'var(--accent-gradient)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff'
-              }}>
-                <Wrench size={18} />
+            <Link href="/" className="logo-brand" style={{ marginBottom: '1.2rem', display: 'inline-flex' }}>
+              <div className="logo-icon-ring">
+                <Sparkles size={18} />
               </div>
               <span>Victor<span className="gradient-text">Media</span></span>
             </Link>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
-              VictorMedia provides free, fast, private, and genuinely useful online tools. All calculations and text processing occur directly in your browser.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+              VictorMedia provides free, private, high-performance web utilities. All calculations and text processing occur directly in your browser with zero latency.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
               <Mail size={16} />
@@ -58,7 +49,7 @@ export const Footer: React.FC = () => {
               <li><Link href="/categories">Tool Categories</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
-              <li><Link href="/sitemap.xml">XML Sitemap</Link></li>
+              <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">XML Sitemap</a></li>
             </ul>
           </div>
 
@@ -84,7 +75,7 @@ export const Footer: React.FC = () => {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)' }}>
             <ShieldCheck size={16} />
-            <span>Privacy-First & Browser-Processed Utilities</span>
+            <span>100% Client-Side Privacy • Antigravity Engine</span>
           </div>
         </div>
       </div>

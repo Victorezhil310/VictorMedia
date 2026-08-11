@@ -3,10 +3,10 @@
 import React, { useEffect } from 'react';
 import Script from 'next/script';
 
-export const AdSenseScript: React.FC = () => {
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+export const DEFAULT_ADSENSE_ID = 'ca-pub-6751037211810646';
 
-  if (!publisherId) return null;
+export const AdSenseScript: React.FC = () => {
+  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || DEFAULT_ADSENSE_ID;
 
   return (
     <Script
@@ -32,7 +32,7 @@ export const AdUnit: React.FC<AdUnitProps> = ({
   responsive = true,
   style = { display: 'block', margin: '2rem 0' },
 }) => {
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || DEFAULT_ADSENSE_ID;
 
   useEffect(() => {
     if (publisherId && typeof window !== 'undefined') {
@@ -45,27 +45,8 @@ export const AdUnit: React.FC<AdUnitProps> = ({
     }
   }, [publisherId]);
 
-  if (!publisherId) {
-    return (
-      <div
-        style={{
-          padding: '1rem',
-          background: 'var(--bg-tertiary)',
-          border: '1px dashed var(--bg-card-border)',
-          borderRadius: 'var(--radius-md)',
-          textAlign: 'center',
-          color: 'var(--text-muted)',
-          fontSize: '0.8rem',
-          margin: '2rem 0'
-        }}
-      >
-        <span>Advertisement Placement (AdSense active when publisher ID is configured)</span>
-      </div>
-    );
-  }
-
   return (
-    <div style={style}>
+    <div style={style} className="adsense-container">
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
