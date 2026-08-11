@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Filter } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { TOOLS_REGISTRY, CATEGORIES } from '@/lib/tools-data';
 import { ToolCard } from '@/components/ToolCard';
 
@@ -75,7 +75,7 @@ export default function AllToolsPage() {
         </div>
       ) : (
         <div style={{ textAlign: 'center', padding: '4rem 1rem', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-lg)' }}>
-          <h3>No tools match your query "{search}"</h3>
+          <h3>No tools match your query &quot;{search}&quot;</h3>
           <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>Try searching for calculators, converters, JSON, or password generators.</p>
         </div>
       )}

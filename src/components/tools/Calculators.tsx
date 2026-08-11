@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Copy, Check, RefreshCw } from 'lucide-react';
+import { } from 'lucide-react';
 
 /* -------------------------------------------------------------------------- */
 /* 1. BASIC CALCULATOR                                                        */
@@ -121,7 +121,7 @@ export const ScientificCalculatorTool: React.FC = () => {
 
   const calculate = () => {
     try {
-      let sanitized = expr
+      const sanitized = expr
         .replace(/π/g, 'Math.PI')
         .replace(/e/g, 'Math.E')
         .replace(/sin\(/g, isRad ? 'Math.sin(' : 'Math.sin(Math.PI/180*')

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Search, Zap, Shield, Sparkles, ArrowRight, Wrench } from 'lucide-react';
+import { Zap, Shield, Sparkles, ArrowRight } from 'lucide-react';
 import { getPopularTools, getFeaturedTools, CATEGORIES, TOOLS_REGISTRY } from '@/lib/tools-data';
 import { ToolCard } from '@/components/ToolCard';
 import { AdUnit } from '@/components/AdComponents';

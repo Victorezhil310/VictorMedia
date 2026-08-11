@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Copy, Check, Code, ShieldCheck, AlertCircle } from 'lucide-react';
+import { Copy, Check, ShieldCheck, AlertCircle } from 'lucide-react';
 
 /* -------------------------------------------------------------------------- */
 /* 1. JSON FORMATTER                                                          */

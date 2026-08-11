@@ -12,7 +12,6 @@ export const WordCounterTool: React.FC = () => {
 
   const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
   const charsWithSpaces = text.length;
-  const charsNoSpaces = text.replace(/\s+/g, '').length;
   const sentences = text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length;
   const paragraphs = text.trim() === '' ? 0 : text.split(/\n+/).filter(Boolean).length;
   const readingTimeMinutes = Math.ceil(words / 200);
@@ -80,7 +79,6 @@ export const CharacterCounterTool: React.FC = () => {
   const charCount = text.length;
   const twitterLimit = 280;
   const seoTitleLimit = 60;
-  const seoMetaLimit = 160;
 
   return (
     <div>
@@ -195,7 +193,7 @@ export const RemoveDuplicateLinesTool: React.FC = () => {
 
   const processDeduplicate = () => {
     const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
-    let unique = Array.from(new Set(lines));
+    const unique = Array.from(new Set(lines));
     if (sortAlpha) {
       unique.sort();
     }

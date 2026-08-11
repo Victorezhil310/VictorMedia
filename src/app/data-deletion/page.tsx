@@ -1,4 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import DataDeletionClient from '@/components/DataDeletionClient';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -17,16 +19,7 @@ export default function DataDeletionPage() {
         To delete your local browser state (theme preferences, recent tool history, saved items), simply click the button below:
       </p>
 
-      <button
-        onClick={() => {
-          localStorage.clear();
-          alert('Local storage cleared successfully!');
-        }}
-        className="btn btn-secondary"
-        style={{ marginBottom: '2rem' }}
-      >
-        Clear Local Browser Data
-      </button>
+      <DataDeletionClient />
 
       <p style={{ color: 'var(--text-secondary)' }}>
         If you have previously submitted a Contact Form message and wish to request removal of your submission email from our records, please email <a href="mailto:arasu9629hf@gmail.com" style={{ color: 'var(--accent-primary)' }}>arasu9629hf@gmail.com</a> with the subject "Data Deletion Request".

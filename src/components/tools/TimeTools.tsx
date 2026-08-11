@@ -92,16 +92,18 @@ export const CountdownTimerTool: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let interval: any = null;
+    let interval: number | null = null;
     if (isActive && timeLeft > 0) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
     } else if (timeLeft === 0 && isActive) {
       setIsActive(false);
       alert('⏰ Countdown Timer Finished!');
     }
-    return () => clearInterval(interval);
+    return () => {
+      if (interval !== null) window.clearInterval(interval);
+    };
   }, [isActive, timeLeft]);
 
   const startTimer = () => {

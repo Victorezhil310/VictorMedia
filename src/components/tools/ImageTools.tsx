@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import QRCode from 'qrcode';
-import { Download, Upload, QrCode, Palette, FileArchive } from 'lucide-react';
+import { Download, Upload } from 'lucide-react';
 
 /* -------------------------------------------------------------------------- */
 /* 1. QR CODE GENERATOR                                                       */
@@ -318,7 +318,7 @@ export const ImageFormatConverterTool: React.FC = () => {
         </div>
         <div>
           <label style={{ display: 'block', fontSize: '0.88rem', marginBottom: '0.4rem' }}>Target Format</label>
-          <select value={targetFormat} onChange={(e) => setTargetFormat(e.target.value as any)} className="select-field">
+          <select value={targetFormat} onChange={(e) => setTargetFormat(e.target.value as 'image/jpeg' | 'image/png' | 'image/webp')} className="select-field">
             <option value="image/webp">WebP (.webp)</option>
             <option value="image/png">PNG (.png)</option>
             <option value="image/jpeg">JPEG (.jpg)</option>
